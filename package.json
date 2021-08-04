@@ -1,0 +1,14 @@
+{
+  "name": "businesspage",
+  "version": "1.0.0",
+  "description": "Business web page for Diff LLC - using for my final project for CS3160",
+  "main": "index.js",
+  "scripts": {
+
+    "start": "node ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Arman Mirhossaini",
+  "license": "ISC"
+}
