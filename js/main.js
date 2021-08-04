@@ -172,8 +172,63 @@ $(document).ready(function(){
 });
 
 
-/* ==========  START GOOGLE MAP ========== */
+/* Performing a GET request
+const https = require('https')
+const options = {
+  hostname: 'https://armaster23.github.io/CS3160FinalProject/',
+  port: 443,
+  path: '/todos',
+  method: 'GET'
+}
 
+const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+  res.on('data', d => {
+    process.stdout.write(d)
+  })
+})
+
+req.on('error', error => {
+  console.error(error)
+})
+*/
+
+/* Handling Post Option for user requests */
+const https = require('https')
+const data = JSON.stringify({
+  todo: 'Record Contact Info'
+})
+
+const options = {
+  hostname: 'https://armaster23.github.io/CS3160FinalProject/',
+  port: 443,
+  path: '/todos',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Content-Length': data.length
+  }
+}
+
+const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+  res.on('data', d => {
+    process.stdout.write(d)
+  })
+})
+
+req.on('error', error => {
+  console.error(error)
+})
+
+req.write(data)
+req.end()
+
+
+
+/* ==========  START GOOGLE MAP ========== */
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 
