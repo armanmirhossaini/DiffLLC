@@ -1,7 +1,7 @@
 #  Using this as my business website for Diff LLC
 A business website using node.js. Hosted on github pages. 
 
-This repo is to be used to host and modify COLaB business website for a static webpage that displays current information on the development/stages of the application. Ill do the cleanup - lots of empty links and shit i never deleted
+This repo is to be used to host and modify COLaB business website for a static webpage that displays current information on the development/stages of the application. 
 
 Here are the notes needed for using the code I sent you:
 
